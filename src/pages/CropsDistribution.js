@@ -210,7 +210,7 @@ function CropsDistribution({
                         : ""
                     }
                   >
-                    <InputNumber
+                    <Input
                       style={{
                         color: "black",
                         fontWeight: "normal",
@@ -222,7 +222,7 @@ function CropsDistribution({
                       min={1}
                       // vale={data.Amount}
                       value={Land}
-                      // type="number"
+                      type="number"
                       // onChange={handleCropDisChange}
                       // type="number"
                       size="large"
@@ -736,10 +736,11 @@ function CropsDistribution({
                             defaultValue={data.min_yield}
                             // maxLength={data.max_yield.length - 1}
                             // vale={data.Amount}
-                            value=""
+                            value={data.min_yield}
                             // onChange={handleCropDisChange}
                             // type="number"
                             // min={12}
+                            min={0}
                             max={data.max_yield - 1}
                             size="large"
                             // onChange={onChange}

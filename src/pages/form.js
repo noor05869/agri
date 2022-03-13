@@ -158,25 +158,19 @@ function Form() {
     } else if (name === "commodities") {
       values[i].commodities = event;
     } else if (name === "area") {
-      values[i].area = event.target.value;
+      values[i].area = event;
     } else if (name === "month") {
       initialValues1.month = event;
       values[i].startDate = moment(event[0]._d).format("MM/DD/YYYY");
       values[i].endDate = moment(event[1]._d).format("MM/DD/YYYY");
     } else if (name === "min_yield") {
-      values[i].min_yield = event.target.value;
-      if (values[i].min_yield > values[i].max_yield) {
-        console.log("max=======", true);
-        setmaxx(1);
-      } else if (values[i].min_yield < values[i].max_yield) {
-        setmaxx(0);
-      }
+      values[i].min_yield = event;
     } else if (name === "max_yield") {
-      values[i].max_yield = event.target.value;
+      values[i].max_yield = event;
     } else if (name === "Cattles") {
       catt[i].Cattles = event;
     } else if (name === "qt") {
-      catt[i].qt = event.target.value;
+      catt[i].qt = event;
     }
     initialValues1.cropsDiss = values;
     initialValues1.cattles = catt;
