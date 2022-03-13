@@ -1,0 +1,76 @@
+.required {
+  content: "*";
+  color: red;
+}
+
+@media (min-width: 375px) {
+  .quantity {
+    margin-left: 40px;
+  }
+  .farmer {
+    /* margin-top: 30px; */
+    margin-left: 130px;
+  }
+  .cropsdis {
+    margin-left: 90px;
+  }
+  /* .land{
+
+    margin-left: 50px;
+ }    */
+  .cropsRButton {
+    margin-left: 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    margin-right: 5px;
+  }
+  .Add1button {
+    margin-top: 30px;
+    /* margin-left: 30px; */
+  }
+
+  /* .Add2button{
+    margin-left: 40px;
+} */
+}
+
+@media (min-width: 992px) {
+  .quantity {
+    margin-left: 0px;
+  }
+
+  .land {
+    margin-left: 30px;
+  }
+  .farmer {
+    /* margin-top: 30px; */
+    margin-left: 25px;
+  }
+  .cropsdis {
+    margin-left: 28px;
+  }
+  .Addbutton {
+    margin-top: 30px;
+  }
+  .Add1button {
+    margin-top: 30px;
+  }
+
+  .cropsRButton {
+    /* margin-left: 22px; */
+    background-color: white;
+    color: black;
+    border: none;
+    margin-right: 5px;
+  }
+  .form1next {
+    margin-right: "50px";
+    background: "#273A9E";
+    border: none;
+  }
+
+  /* .Add2button{
+        margin-top: 40px;;
+    } */
+}
