@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import moment from "moment";
 import "./required.css";
 import {
@@ -89,7 +89,9 @@ function CropsDistribution({
       { Commodity: "", Maize: "", Maize2: "", Potato: "" },
     ]);
   }
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   function onChange1(value, dateString) {
     console.log("Selected Time: ", value[0]._d);
     let abc = moment(value[0]._d).format("MM/DD/YYYY");
