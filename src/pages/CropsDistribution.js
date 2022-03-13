@@ -61,6 +61,9 @@ function CropsDistribution({
     },
   ]);
   const { RangePicker } = DatePicker;
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   // const history=useHistory()
   const { Option } = Select;
@@ -89,9 +92,7 @@ function CropsDistribution({
       { Commodity: "", Maize: "", Maize2: "", Potato: "" },
     ]);
   }
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+
   function onChange1(value, dateString) {
     console.log("Selected Time: ", value[0]._d);
     let abc = moment(value[0]._d).format("MM/DD/YYYY");
@@ -209,15 +210,19 @@ function CropsDistribution({
                         : ""
                     }
                   >
-                    <Input
-                      style={{ color: "black", fontWeight: "normal" }}
+                    <InputNumber
+                      style={{
+                        color: "black",
+                        fontWeight: "normal",
+                        width: "100%",
+                      }}
                       onChange={handleChange}
                       name="Land"
                       defaultValue={Land}
                       min={1}
                       // vale={data.Amount}
                       value={Land}
-                      type="number"
+                      // type="number"
                       // onChange={handleCropDisChange}
                       // type="number"
                       size="large"
@@ -521,8 +526,12 @@ function CropsDistribution({
                               : ""
                           }
                         >
-                          <Input
-                            style={{ color: "black", fontWeight: "normal" }}
+                          <InputNumber
+                            style={{
+                              color: "black",
+                              fontWeight: "normal",
+                              width: "100%",
+                            }}
                             onChange={(event) =>
                               handleSelectChange(i, event, "area")
                             }
@@ -531,7 +540,7 @@ function CropsDistribution({
                             defaultValue={data.area}
                             min={1}
                             value={data.area}
-                            type="number"
+                            // type="number"
                             size="large"
                             // onChange={onChange}
                           />
@@ -625,8 +634,12 @@ function CropsDistribution({
                               : ""
                           }
                         >
-                          <Input
-                            style={{ color: "black", fontWeight: "normal" }}
+                          <InputNumber
+                            style={{
+                              color: "black",
+                              fontWeight: "normal",
+                              width: "100%",
+                            }}
                             onChange={(event) =>
                               handleSelectChange(i, event, "max_yield")
                             }
@@ -635,7 +648,7 @@ function CropsDistribution({
                             min={1}
                             // vale={data.Amount}
                             // value={cropscycleAmount}
-                            type="number"
+                            // type="number"
                             // onChange={handleCropDisChange}
                             // type="number"
                             size="large"
@@ -710,8 +723,12 @@ function CropsDistribution({
                               : ""
                           }
                         >
-                          <Input
-                            style={{ color: "black", fontWeight: "normal" }}
+                          <InputNumber
+                            style={{
+                              color: "black",
+                              fontWeight: "normal",
+                              width: "100%",
+                            }}
                             onChange={(event) =>
                               handleSelectChange(i, event, "min_yield")
                             }
@@ -721,7 +738,9 @@ function CropsDistribution({
                             // vale={data.Amount}
                             value=""
                             // onChange={handleCropDisChange}
-                            type="number"
+                            // type="number"
+                            // min={12}
+                            max={data.max_yield - 1}
                             size="large"
                             // onChange={onChange}
                           />
@@ -979,7 +998,7 @@ function CropsDistribution({
                             : ""
                         }
                       >
-                        <Input
+                        <InputNumber
                           name={`${i}quantity`}
                           onChange={(event) =>
                             handleSelectChange(i, event, "qt")
@@ -987,14 +1006,15 @@ function CropsDistribution({
                           defaultValue={data.qt}
                           // vale={data.Amount}
                           min={1}
+                          size="large"
                           // onChange={handleCropDisChange}
-                          type="number"
+                          // type="number"
                           style={{
                             width: "100%",
                             color: "black",
                             fontWeight: "normal",
 
-                            height: "40px",
+                            // height: "40px",
                           }}
                           // onChange={onChange}
                         />

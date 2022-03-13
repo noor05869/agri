@@ -43,6 +43,9 @@ function Form3({
   //     message.success("Form Submitted Successfully");
   //   }
   // }
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [mode, setmode] = useState(true);
   function handleMode(value) {
     if (value === "Aarhti") {
@@ -55,9 +58,7 @@ function Form3({
   }
 
   useEffect(() => {}, [mode]);
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+
   return (
     <div>
       <Header />
@@ -223,13 +224,14 @@ function Form3({
                           : ""
                       }
                     >
-                      <Input
-                        min={1}
+                      <InputNumber
                         name="percentage"
                         defaultValue={percentage}
                         value={percentage}
                         // disabled={mode===false? true:false}
                         onChange={handleChange}
+                        min={0}
+                        max={100}
                         type="number"
                         style={{
                           width: "100%",
